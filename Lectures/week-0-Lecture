@@ -1,0 +1,42 @@
+CS50 2018 Week 0
+
+In your own words discuss Binary and its impact:
+
+Binary is base-2 numeral system, represented by 0 and 1.
+Example: 0, 1, 10, 11, 100  in base-2 corresponds to 0,1,2,3,4 in decimal numeral system.
+
+Binary is so powerful because of its implementation, the binary system is used internally by modern
+computers which uses binary digit or bit, the basic unit of information or data. A bit is usually
+represented by an electrical voltage - if it is high it is 1 and when the voltage is low it is 0 or
+by electrical state of flip-flop circuit switch when flipped on it is 1 and 0 when turned off.
+
+CPU, the Central Processing Unit, which is the brain of the computer holds million and billions of
+these "switches" or transistors. Through a series of steps, computers break down the commands given
+into sequence of bits. These sequences can be interpreted and evaluated by CPU to give output on the screen.
+
+In your own words discuss Algorithms as was introduced:
+
+Algorithm is a set of instructions to solve the problem step-by-step. To write a computer program
+we give the computer, an input, followed by step to step instructions, exactly what we want it to do.
+The computer then executes the program, following each step mechanically, and gives the output.
+The algorithm is the basic technique used to get the job done.
+
+Once we have an algorithm we can put it in the form of flowchart or pseudocode and then write the
+actual code that a computer can understand. The structure of the pseudocode is :
+
+Input --> Process --> Output
+
+For example: To find a sum of two numbers. We can solve this by writing out steps. Then convert the
+steps to code.
+
+Start
+Input - Number 1 - x
+	Number 2 - y
+Compute Sum - S = x + y
+Output - S
+Stop
+
+There are complex algorithms with which the output can be achieved much faster and have a
+lot of impact on today's economy. For example, Google hangouts helps in sending and receiving live
+audio and video chat, Google maps enables to find locations anywhere in the world etc. These algorithms
+too started with a set of steps to accomplish a specific task.

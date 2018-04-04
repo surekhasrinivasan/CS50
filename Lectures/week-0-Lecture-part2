@@ -1,0 +1,27 @@
+Algorithm Research
+
+Pick and research a major algorithm. Find out it's impact on the Technology world as well as it's
+financial impact.
+
+Compression Algorithm :
+There are complex algorithms with which the output can be faster and have a lot of impact on today's economy.
+For example, Google hangouts which helps in sending and receiving live audio and video.
+
+Google hangouts use audio and video compression algorithms to transmit live  audio and video across the
+internet. Video compression is the technique used to prepare video in order to transport it over the internet
+and to deliver it to various kinds of video players. High quality means large file size, small file size means
+lower quality. Compression is always a compromise between the file size and quality.
+
+Codec is a compression algorithm. The word codec stands for compression - decompression. It is used to
+compress the video information on one end using an encoding program and decompress it at the other end
+for playback. Compression algorithms achieve compression by replacing repeated occurrences of data with
+references to a single copy of these existing earlier in the input data stream. Basically it's a piece
+of software that makes your video readable by your computer and allows you to play it. Without codec we
+cannot play a video file.
+
+The transmission of audio and video signals requires a network with large bandwidth. The reduction of
+the required bandwidth and memory space, while maintaining high audio and video quality, can be achieved
+by compression algorithms. Recent advances in computer technology have significant improvements in compression
+algorithms. Also, there is growing need to transfer large amount of data over the network. Hence, the
+compression algorithms have a significant economic impact related to various storage media or better
+utilization of network connections.

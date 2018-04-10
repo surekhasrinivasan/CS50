@@ -1,0 +1,128 @@
+CS50 Week 1 Discussions:
+
+Discuss the C Primitive data types and operators. Note any differences between C and Javascript
+
+Operators: + - * / %
+C-data types: int, float, double, char, long, long long.
+Javascript data types: Boolean, String, Number, Object, Array, Null, Undefined
+
+Difference between C and Javascript
+
+C
+Javascript
+C is a statically, strongly typed language
+C is a compiled programming language.
+C data types are to be strictly
+C does not have String type
+C does not have Object data type. Instead C has “Structures” used like an Object
+C is a memory management programming language.
+Semicolon is a must
+
+Javascript is an interpreted computer scripting language.
+ Javascript is a weakly typed, dynamic language.
+Variables have dynamic types
+Javascript has Object data type which is expressed as Key - Value pair.
+Javascript has Boolean datatype
+Semicolon is optional
+
+Discuss the concepts of looping and conditionals. Consider where potential bugs exist in each and some other Looping use cases.
+
+Loops in C programming languages are :
+
+For Loop
+While Loop
+Do While Loop
+
+For Loop: A For loop is a control flow statement that helps repeatedly iterate a set of code based on a given boolean condition.
+
+For Loop Syntax
+
+for(Initialization, Condition; Increment/Decrement)
+{
+set of code;
+}
+The first step of For Loop is the initialization of the variable. It then validates the condition. If the condition evaluates to false, then the program come out of the For loop. If the condition evaluates to true then the inner block of code is executed. As soon as the last line of code is executed, the program control comes to the third parameter which is increment/decrement operator and executes it. After increment/decrement, the control moves to the initialization section, then validates the condition and again executes the inner block of code. This iteration continues until the condition is false. Once it evaluates to false, the program control skips the re-iteration process and executes the line of codes after the For loop.
+
+While Loop: A While loop is an entry controlled loop where the condition checking is performed before the program control moves within the while loop.
+
+While loop syntax:
+
+while(entry condition)
+{
+	statements;
+	increment/decrement;
+}
+So first the condition is validated, if it evaluates to true, the program executes the statements, then it increments/decrements if provided, then again moves back to the condition checking. Once the condition evaluates to false, the program moves out of the while loop block and executes any other statements.
+
+Do While Loop: A Do while loop is very similar to while loop. The difference is that the do while loop has an exit controlled condition.
+
+Do while loop syntax
+
+do
+{
+	statements;
+	increment/decrement;
+} while (exit-condition)
+A do-while loop guarantees the execution of the loop at least once because it checks the loop condition AFTER the loop iteration.
+
+If the condition is true, the program control goes back to the do block and performs the iteration again and this happens until the condition is met.
+
+If the condition turns out to be false, the program control exits the do block, and executes the other statements below.
+
+Some common problems with looping are :
+
+Loop that never start
+Loop that never finish that is if we get the increment wrong the loop may never end which end up in infinite loop.
+Loop that repeat the wrong number of times.
+
+Conditionals in C
+
+if statement
+
+The if statement evaluates the lines of code inside the body of if the condition evaluates to true. If condition evaluates to false, the code in the body is skipped from execution.
+
+
+Syntax:
+
+if(condition)
+{
+	//codes inside the body of if
+}
+
+if...else statement
+
+The if...else statement executes some code if the condition is true and some other code if the condition is false.
+
+Syntax:
+
+if(condition)
+{
+	//codes inside the body of if
+}
+else {
+	//codes inside the body of else
+}
+
+Nested if...else statement
+
+The if...else statement executes two different codes depending upon whether the test expression is true or false. Sometimes, a choice has to be made from more than 2 possibilities.
+
+The nested if...else statement allows you to check for multiple test expressions and execute different codes for more than two conditions.
+if (condition1)
+{
+   // statements to be executed if condition1 is true
+}
+else if(condition2)
+{
+   // statements to be executed if condition1 is false and condition2 is true
+}
+else if (condition 3)
+{
+   // statements to be executed if condition1 and condition2 is false and condition 3 is true
+}
+.
+.
+else
+{
+   // statements to be executed if all test expressions are false
+}

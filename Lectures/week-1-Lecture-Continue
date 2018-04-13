@@ -1,0 +1,49 @@
+CS50 Week 1 Cont. Discussions:
+
+
+Discuss the tools available for testing and debugging C programs. Go through the program creation process
+
+Testing means verifying correct behavior of the program or the application. Testing can be done at all
+stages: starting from the requirements stage, interface design, algorithm design, implementation, and
+integration with other modules. Testing aims at correcting the code whereas Debugging aims at locating errors.
+
+Debugging is a cyclic activity involving execution testing and code correction. It is part of the software
+testing process and is an integral part of the entire software development lifecycle. The debugging process
+starts as soon as code is written and continues in successive stages as code is combined with other units
+of programming to form a software product. In a large program that has thousands and thousands of lines of
+code, the debugging process can be made easier by using strategies such as unit tests, code reviews and pair
+programming.
+
+Debugging is the process of locating and removing computer program bugs, errors or abnormalities, which is
+methodically handled by software programmers via debugging tools. Debugging Tools available for C programs:
+
+Printf - An easy way to inspect what your application is doing is to write some printf message and
+check through the lines of code.
+
+Assert statements - C compilers that meet the ANSI standard have assert procedures. The assert procedure
+has a single parameter, which is a Boolean expression. When a call to assert is executed the expression
+is evaluated. If it evaluates to true then nothing happens. If it evaluates to false then the program
+terminates with an error message. The assert procedure can be used for detecting and reporting error conditions.
+
+Lint - A Lint or a Linter is a program that supports linting that is verifying code quality. This is most
+helpful in finding some common and uncommon mistakes that are made during coding. Lint can help find
+dangerous and non-portable constructs in the code before the compiler turns them into run-time bugs.
+Basically it checks the files for syntactical correctness.
+
+GDB - The GNU Debugger is a portable debugger that runs on many Unix-like systems and works for many
+programming languages like C, C++. GDB allows you to see what is going on `inside' another program while
+it executes -- or what another program was doing at the moment it crashed. Debugging programs provide
+capabilities for stepping through a program line-by-line and running a program with breakpoints set by
+the user. When a line with a breakpoint is about to be executed the program is interrupted so that the user
+can examine or modify program data. Debugging programs also can provide tracebacks in case of run-time errors.
+
+Some of the debugging tools tha CS50 uses are :
+
+Help50  - help50 is designed to be a virtual teaching tool. It gives out the clues or hints of what's going
+on in the program. It helps in finding logical bugs.
+
+Eprintf - error printf - helps in sanity check. It prints an error message in the terminal with the line
+number so that the programmer gets an idea of what part of the code is executed, it does not tell you where
+the program is going wrong.
+
+Debug50 - debug50 is a Graphical User Interface wrapper for a tool known GDB which is debugging platform.

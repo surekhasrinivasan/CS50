@@ -47,3 +47,66 @@ number so that the programmer gets an idea of what part of the code is executed,
 the program is going wrong.
 
 Debug50 - debug50 is a Graphical User Interface wrapper for a tool known GDB which is debugging platform.
+
+
+Discuss how Strings and Arrays are stored in memory and how they can be accessed. Discuss how this can
+affect Cryptography as this is related to PSet 2.
+
+Arrays are fundamental data structure. We use arrays to hold values of the same type at contiguous
+memory locations. An array is partitioned into small, identically-sized blocks of space called elements.
+Each element of the array can store a certain amount of data of the same data type such as int or char
+and can be accessed directly by an index.
+
+An array stores its elements in contiguous memory locations. If the array is created locally it will be
+on stack where elements are stored depending on the storage specification.
+
+For example: An array declared globally or statically would have different storage specification from an
+array declared locally. A local array will be usually created on stack while a global or static array will
+be usually created on bss/data segments and a dynamically created array will be created on heap.
+
+String in C is an array of characters. The length of a string is determined by a terminating null
+character: '\0'. For example: a string "abc" has four character :'a', 'b', 'c', and '\0' (terminating
+null character).
+
+We can access each character in the array using subscript notation, as in:
+
+printf("Third char is : %c\n", name[3]) which prints out the third from string name.
+
+Another way of accessing a contiguous chunk of memory, is with a pointer. Since strings are made up of
+characters,we use pointers to characters or char *s. However, pointers only hold an address, they cannot
+hold all the characters in a character array. This means that when we use a char * to keep track of a string,
+the character array containing the string must already exist (having been either statically- or
+dynamically-allocated).
+
+A string might be accessed in a statically-allocated array, it might be accessed via a pointer to a
+statically-allocated array, or via a pointer to a dynamically-allocated array.
+
+Cryptographic functions operate on bytes, not characters
+
+All operations with modern encryption algorithms operate on a sequence of bytes, not on a string of characters.
+So the simple rule is always to convert your "String" type into an array of "Byte" types before passing it
+to the cryptographic function.
+
+It is helpful to classify data into two different types when doing cryptographic operations: 'text' and
+'binary'.
+
+'Text' consists of readable, printable characters we expect to see on our computer screen or in a printout.
+Computers store 'text' internally in several different formats and your programming language may use another
+format as well.
+
+'Binary' data is a sequence of bits (a bit string) that are stored in a computer as a sequence of 8-bit
+bytes (a byte is sometimes called an octet and a sequence of bytes is sometimes called an octet string or
+byte array).
+
+A string is a sequence of characters, like "abc" or "Hello world!" Your computer will store this internally
+as a sequence of bytes in an encoding format that it knows. When you ask the computer to display this
+string on the screen or print it. There are several different ways to encode a given character into a byte
+sequence. To pass the information about the string "ABC" to a cryptographic function like Encrypt() you need
+to convert this to a sequence of bytes. The correct term for this is to encode the characters. Then you need
+to decode the decrypted bytes back to characters.
+
+In the old days, all programming was done with strings of simple ASCII characters each of which fitted
+into one byte. A "string" of characters would be stored as an array of single bytes in the same order
+and - to the computer - there was no difference between them. So English-speaking and western European
+programmers got used to using the term "character" and "byte" as meaning the same thing. Then they wrote
+programs that treated the string type as identical to an array of byte types.

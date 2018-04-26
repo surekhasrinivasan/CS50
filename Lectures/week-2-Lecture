@@ -1,7 +1,7 @@
 CS50 Week 2 Discussions:
 
-Discuss the three sorting algorithms mentioned in the lecture. Look up one additional sorting algorithm and
-compare it against the initial three.
+1. Discuss the three sorting algorithms mentioned in the lecture. Look up one additional sorting algorithm
+and compare it against the initial three.
 
 Sorting algorithm is an algorithm that puts elements of a list in a certain order. Efficient sorting is
 important for optimizing the use of other algorithms which require input data to be in sorted lists.
@@ -10,49 +10,85 @@ Insertion sort is a simple sorting algorithm that is relatively efficient for sm
 lists. It works by taking elements from the list one by one and inserting them in their correct position into
 a new sorted list. In arrays, the new list and the remaining elements can share the array's space, but insertion
 is expensive, requiring shifting all following elements over by one. In the worst case, the array is in reverse
-order. We have to shift each of the n elements up to n positions, every single time we make an insertion.
-That's a lot of shifting. In the best case, the array is perfectly sorted, where we could just track it on
-without having to do any shifting.
+order. We have to shift each of the n elements up to n positions, every single time we make an insertion. That's
+a lot of shifting. In the best case, the array is perfectly sorted, where we could just track it on without having
+to do any shifting.
 
 In selection sort, first the smallest unsorted element is found and added to the end of the sorted list, repeats
-the same process until no unsorted elements remain. It builds a sorted list, one element at a time. The worst
-case scenario is to look over all of the elements of the array, to find the smallest unsorted element, and we have
-to repeat this process n times, once for each of n elements i.e., Big O(n squared).The best case scenario is
-exactly the same, We actually have to still step through every single element of the array in order to confirm
-that it is, in fact, the smallest element i.e., Big Omega of n squared.
+the same process until no unsorted elements remain. It builds a sorted list, one element at a time. The worst case
+scenario is to look over all of the elements of the array, to find the smallest unsorted element, and we have to
+repeat this process n times, once for each of n elements i.e., Big O(n squared).The best case scenario is exactly
+the same, We actually have to still step through every single element of the array in order to confirm that it is,
+in fact, the smallest element i.e., Big Omega of n squared.
 
-Bubble sort is a simple sorting algorithm. The algorithm starts at the beginning of the data set. It compares
-the first two elements, and if the first is greater than the second, it swaps them. It continues doing this for
-each pair of adjacent elements to the end of the data set. It then starts again with the first two elements,
-repeating until no swaps have occurred on the last pass. Bubble sort can be used to sort a small number of items.
-It can also be used efficiently on a list of any length that is nearly sorted (that is, the elements are not
-significantly out of place).
+Bubble sort is a simple sorting algorithm. The algorithm starts at the beginning of the data set. It compares the
+first two elements, and if the first is greater than the second, it swaps them. It continues doing this for each
+pair of adjacent elements to the end of the data set. It then starts again with the first two elements, repeating
+until no swaps have occurred on the last pass. Bubble sort can be used to sort a small number of items. It can
+also be used efficiently on a list of any length that is nearly sorted.
 
-In the worst case scenario, the array is in completely reverse order, and so we have to bubble each of the
-large elements all the way across the array. And we effectively also have to bubble all of the small elements
-back all the way across the array, too. So each of the n elements has to move across all of the other n elements.
+In the worst case scenario, the array is in completely reverse order, and so we have to bubble each of the large
+elements all the way across the array. And we effectively also have to bubble all of the small elements back all
+the way across the array, too. So each of the n elements has to move across all of the other n elements.
 
 In the best case scenario the array is already sorted when we go in. We don't have to make any swaps on the first
-pass. So we might have to look at fewer elements. We don't have to repeat this process a number of times over.
-So in the best case, this is actually better than selection sort-- it's omega of n.
+pass. So we might have to look at fewer elements. We don't have to repeat this process a number of times over. So
+in the best case, this is actually better than selection sort-- it's omega of n.
 
 In selection sort, the smallest elements in the sorted array is moved from left to right, smallest to largest.
 In case of bubble sort, the elements in the sorted array is moved from right to left, largest to smallest.
 
 Merge sort algorithm is divide-and-conquer sorting algorithm. Using the Divide and Conquer technique, a problem
-is divided into subproblems. When the solution to each subproblem is ready, we 'combine' the results from the
-subproblems to solve the main problem. The way that merge sort does this is by recursion. We may feel that it
-takes lot of steps and longer time than insertion sort, bubble sort, or selection sort. But actually, because a
-lot of these processes are happening at the same time, this algorithm actually clearly is fundamentally different
+is divided into subproblems. When the solution to each subproblem is ready, we 'combine' the results from
+the subproblems to solve the main problem. The way that merge sort does this is by recursion. We may feel that
+it takes lot of steps and longer time than insertion sort, bubble sort, or selection sort. But actually, because
+a lot of these processes are happening at the same time, this algorithm actually clearly is fundamentally different
 and also significantly more efficient.
 
 In the worst case scenario, we have to split n elements up and then recombine them. But when we recombine them,
-what we're doing is basically doubling the size of the smaller arrays. We have a bunch of one element arrays
-that we effectively combine into two element arrays. And then we take those two element arrays and combine them
-together into four element arrays, and so on, and so on, and so on, until we have a single n element array. In
-the worst case scenario, merge sort runs in n log n. We have to look at all of the n elements, and we have to
-combine them together in log n sets of steps. In the best case scenario, the array is perfectly sorted.
+what we're doing is basically doubling the size of the smaller arrays. We have a bunch of one element arrays that
+we effectively combine into two element arrays. And then we take those two element arrays and combine them together
+into four element arrays, and so on, until we have a single n element array. In the worst case scenario, merge sort
+runs in n log n. We have to look at all of the n elements, and we have to combine them together in log n sets of
+steps. In the best case scenario, the array is perfectly sorted.
 
 So in the best case and in the worst case, this algorithm runs in n log n time. Merge sort is definitely more
 powerful and can be used to sort a large data set using the idea of recursion. And it's going to make programs
 really much more efficient using merge sort versus anything else.
+
+2. Discuss the concept of big O and little O why is understanding these values important and why does it matter?
+What are the benefits of good efficiency in a large scale view?
+
+Big O is used to refer to an upper bound on an algorithm's running time. We generally call the worst-case runtime
+of an algorithm big-O. Big O is the maximum time taken by an algorithm in the worst possible case. A worst possible
+case can be the searched item is the last to be found, while sorting a list of items, even the last item needs to
+be sorted, and all the loops in the code repeat for maximum iterations possible, etc. So an algorithm might be
+said to run in O of n or O of n squared.
+
+Big O notation is used in Computer Science to describe the performance or complexity of an algorithm.
+
+O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the
+input data set.
+
+O(n) describes an algorithm whose performance will grow linearly and in direct proportion to the size of the
+input data set.
+
+O(n squared) represents an algorithm whose performance is directly proportional to the square of the size of the
+input data set. This is common with algorithms that involve nested iterations over the data set.
+
+If big O is our upper bound on running time, the lower bound on an algorithm's running time is the little o. So
+in the best case scenario, how little time might an algorithm take to sort a list of items, this is a capital
+omega, and it's used in exactly the same way omega of n squared, or omega of n, or omega of log n. So it's the
+same symbology, it just refers to a lower bound. So, it takes this few steps, or this many steps. Big O, big omega.
+
+It is really important to understand algorithms and how they process data. If we have a really efficient
+algorithm, we can minimize the amount of resources available. If we have an algorithm that is going to take
+a lot of work to process a really large set of data, it's going to require more and more resources, which is
+money, RAM, etc. Generally, when we talk about the complexity of an algorithm which might be time complexity or
+space complexity we talk about the worst-case scenario.
+
+For example a company that deals with hundreds of millions of customers. And they need to process that customer
+data. As the number of customers they have gets bigger and bigger, it's going to require more and more resources
+that depends on how we analyze the algorithm.
+
+*******************************************

@@ -1,0 +1,52 @@
+CS50 Week 3 Discussion
+
+1. Talk about pointers and how they work in regards to memory to make strings work:
+
+A pointer is a memory address or we can say a pointer is a variable whose value is the address of
+another variable, i.e., direct address of the memory location. Like any variable or constant, you must
+declare a pointer before using it to store any variable address. The general form of a pointer variable
+declaration is −
+
+type *var-name;
+
+where 'type' is the pointer's data type and var-name is the name of the pointer variable. The asterisk  *
+is used to declare a pointer which is called dereferencing operator. Dereferencing a pointer means getting
+the value that is stored in the memory location pointed by the pointer.
+
+int a = 10;
+int* ptr = &a;
+printf("%d", *ptr); // with *ptr dereferencing the pointer.
+
+Pointers can save memory and run faster because it does not have to duplicate the data. It is always a
+good practice to assign a NULL value to a pointer variable in case you do not have an exact address to
+be assigned. This is done at the time of variable declaration. A pointer that is assigned NULL is called
+a null pointer.
+
+In C, a string is implemented as an array of characters, where the beginning of the array is at some
+location in computer memory and there is a nul character (\0), which indicates the end of the string.
+A disadvantage of creating strings using the character array syntax is that we must say ahead of time
+how many characters the array may hold. We must specify maximum number of characters which we will ever
+need to store in an array. This type of allocation, where the size of the array is determined at
+compile-time is called static allocation. For example:
+
+char name[10] = "Smith"; //5 characters
+
+Another way of accessing a contiguous chunk of memory instead of with an array, is with a pointer.
+Pointers only hold an address, they cannot hold all the characters in a character array. This means when
+we use char * to keep a track of a string, the character array containing the string allocated statically
+or dynamically must already exist. If we assign the pointer the address of an array of characters, the
+pointer must be a character pointer that is the types must match.
+
+Also, to assign the address of an array to a pointer, the address-of(&) operator is not used, since the
+name of an array behaves like the address of that array.
+
+Sometimes when we do not know how big a string is until run-time, we can allocate the string dynamically
+using malloc() (memory allocation) function. Malloc() takes the number of bytes needed as its parameter
+and gives us enough space for a string of the desired size. One thing not to be forgotten is 1 extra nul
+character '\0' for the end of the string.
+
+char *str = (char *)malloc(sizeof(char) * (length + 1));
+
+When using malloc three rules to be remembered are: only things that we have malloced should be freed.
+If statically declared an integer, int x;, that lives on the stack, you don't want to free x. So only
+things that you've malloced should be freed.  And don't free something twice.

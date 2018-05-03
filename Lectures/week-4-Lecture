@@ -1,0 +1,57 @@
+CS50 Week 4 Discussions
+
+1. Discuss the data structures that were mentioned in this lecture. These data types used the Struct
+system to be created. Discuss their implementation and potential use cases.
+
+Data structure is a way of organizing and storing data in a computer so that it can be accessed and
+modified efficiently.
+
+Different types of data structures are :
+
+Array:
+
+An array is a simple data structure consisting of a collection of elements of same data type
+stored at contiguous memory locations.
+
+Advantages:
+Arrays are relatively easy to sort. Arrays allow random access of elements. This makes accessing
+elements by position faster. Arrays have better cache locality that can make a pretty big difference
+in performance.
+
+Disadvantages:
+Arrays have a fixed size, no flexibility. Also, inserting and removing elements in between the arrays
+elements is not possible.
+
+Linked-List
+
+Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at contiguous
+location; the elements are linked using pointers.
+
+A linked list is represented by a pointer to the first node of the linked list. The first node is called
+head. If the linked list is empty, then value of head is NULL. In C, we can represent a node using
+structures. Each node in a list consists of at least two parts: data and pointer to the next node.
+
+A simple real life example is a Train, here each coach is connected to its previous and next coach
+(Except first and last). In terms of programming consider coach body as node value and connectors as
+links to previous and next nodes.
+
+Consider the history section of web browsers, where it creates a linked list of web-pages visited, so
+that when you check history or press back button, the previous node's data is fetched.
+
+Advantages over arrays
+1) Dynamic size
+2) Ease of insertion/deletion
+
+Disadvantages:
+1) Random access is not allowed. We have to access elements sequentially starting from the first node.
+So we cannot do binary search with linked lists.
+2) Extra memory space for a pointer is required with each element of the list.
+
+Binary Tree:
+
+Binary tree is one of the data structures that are efficient in insertion and searching operations.
+Binary tree works on O (logN) for insert/search/delete operations. Binary tree is basically tree in
+which each node can have two child nodes and each child node can itself be a small binary tree.
+Binary tree works on the rule that child nodes which are lesser than root node keep on the left side
+and child nodes which are greater than root node keep on the right side. Same rule is followed in
+child nodes as well that are itself sub-trees.

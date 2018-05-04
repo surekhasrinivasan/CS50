@@ -3,15 +3,15 @@ CS50 Week 4 Discussions
 1. Discuss the data structures that were mentioned in this lecture. These data types used the Struct
 system to be created. Discuss their implementation and potential use cases.
 
-Data structure is a way of organizing and storing data in a computer so that it can be accessed and
-modified efficiently.
+Data structure is a way of organizing and storing data in a computer so that it can be accessed
+and modified efficiently.
 
 Different types of data structures are :
 
 Array:
 
-An array is a simple data structure consisting of a collection of elements of same data type
-stored at contiguous memory locations.
+An array is a simple data structure consisting of a collection of elements of same data type stored
+at contiguous memory locations.
 
 Advantages:
 Arrays are relatively easy to sort. Arrays allow random access of elements. This makes accessing
@@ -29,11 +29,12 @@ location; the elements are linked using pointers.
 
 A linked list is represented by a pointer to the first node of the linked list. The first node is called
 head. If the linked list is empty, then value of head is NULL. In C, we can represent a node using
-structures. Each node in a list consists of at least two parts: data and pointer to the next node.
+structures.
+Each node in a list consists of at least two parts: data and pointer to the next node.
 
-A simple real life example is a Train, here each coach is connected to its previous and next coach
-(Except first and last). In terms of programming consider coach body as node value and connectors as
-links to previous and next nodes.
+A simple real life example is a Train, here each coach is connected to its previous and next
+coach (Except first and last). In terms of programming consider coach body as node value and connectors
+as links to previous and next nodes.
 
 Consider the history section of web browsers, where it creates a linked list of web-pages visited, so
 that when you check history or press back button, the previous node's data is fetched.
@@ -47,11 +48,68 @@ Disadvantages:
 So we cannot do binary search with linked lists.
 2) Extra memory space for a pointer is required with each element of the list.
 
+Hash tables:
+
+Hash table or associative array is a popular data structure used in programming. A hash table is just
+a linked list with a hash function. A hash function basically just takes things and puts them in
+different "baskets". Each "basket" is just another linked list or something else depending on how you
+implement it. Hash table is a two-step process. First we need to run our data through a hash function
+to get a hash code, and then we insert the element into the hash table at that hash code location.
+
+Advantages:
+
+Main advantage is synchronization.
+In many situations, hash tables turn out to be more efficient than search trees or any other table
+lookup structure. For this reason, they are widely used in many kinds of computer softwares, particularly
+for associative arrays, database indexing, caches and sets.
+
+Disadvantages
+
+Hash collisions are practically unavoidable. when hashing a random subset of a large set of possible
+keys.
+Hash tables become quite inefficient when there are many collisions.
+Hash table does not allow null values, like hash map.
+
 Binary Tree:
 
 Binary tree is one of the data structures that are efficient in insertion and searching operations.
 Binary tree works on O (logN) for insert/search/delete operations. Binary tree is basically tree in
-which each node can have two child nodes and each child node can itself be a small binary tree.
-Binary tree works on the rule that child nodes which are lesser than root node keep on the left side
-and child nodes which are greater than root node keep on the right side. Same rule is followed in
-child nodes as well that are itself sub-trees.
+which each node can have two child nodes and each child node can itself be a small binary tree. Binary
+tree works on the rule that child nodes which are lesser than root node keep on the left side and child
+nodes which are greater than root node keep on the right side. Same rule is followed in child nodes
+as well that are itself sub-trees.
+
+Advantages:
+Compared to linear search (checking each element in the array starting from the first), binary search
+is much faster. Linear search takes, on average N/2 comparisons (where N is the number of elements in
+the array), and worst case N comparisons. Binary search takes an average and worst-case log2(N)
+comparisons. So for a million elements, linear search would take an average of 500,000 comparisons,
+whereas binary search would take 20.
+
+Disadvantages:
+
+It’s more complicated than linear search, and is overkill for very small numbers of elements.
+It works only on lists that are sorted and kept sorted. That is not always feasible, especially if
+elements are constantly being added to the list.
+It works only on element types for which there exists a less-than relationship.
+
+Tries:
+
+Tries is a tree that stores strings. Maximum number of children of a node is equal to size of alphabet.
+Trie supports search, insert and delete operations in O(L) time where L is length of key. Tries combine
+arrays, structures, and pointers together to store data.
+
+Advantages:
+
+With Trie, we can insert and find strings in O(L) time where L represent the length of a single word.
+Trie is faster than Binary search tree. This is also faster than Hashing because of the ways it is
+implemented. We do not need to compute any hash function.
+
+We can easily print all words in alphabetical order which is not easily possible with hashing.
+We can efficiently do prefix search with Trie.
+
+Disadvantages:
+
+The main disadvantage of tries is that they need lot of memory for storing the strings. For each
+node we have too many node pointers(equal to number of characters of the alphabet).
+

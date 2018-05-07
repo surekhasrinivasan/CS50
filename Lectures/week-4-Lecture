@@ -113,3 +113,48 @@ Disadvantages:
 The main disadvantage of tries is that they need lot of memory for storing the strings. For each
 node we have too many node pointers(equal to number of characters of the alphabet).
 
+2. Discuss memory management and its importance in compiler languages. Consider how memory management
+was not thought about much in Javascript and try to consider the reasons why.
+
+Memory management is basically to allocate the memory needed, use the allocated memory (read, write)
+and release the allocated memory when it is not needed anymore. The part of using allocated memory is
+explicit in all languages. The allocation and releasing the allocated memory are explicit in low-level
+languages like C but are mostly implicit in high-level languages like JavaScript.
+
+C is a systems programming language in which memory management is manual.There are two ways in which
+memory can be allocated in C, by declaring variables,or by explicitly requesting space by allocating
+memory dynamically. The standard library functions for memory management in C, malloc, calloc, realloc
+and free, are the means of implementing dynamic memory allocation.
+
+Malloc -  allocates the specified number of bytes
+realloc	 - increases or decreases the size of the specified block of memory. Reallocates it if
+needed
+Calloc - allocates the specified number of bytes and initializes them to zero
+Free - 	releases the specified block of memory back to the system
+
+Most memory management issues arises when the allocated memory is not freed. The hardest task here is
+to find when "the allocated memory is not needed any longer". It often requires the developer to
+determine where in the program such piece of memory is not needed anymore and free it.
+
+High-level languages embed a piece of software called "garbage collector" whose job is to track memory
+allocation and use in order to find when a piece of allocated memory is not needed any longer in which
+case, it will automatically free it.
+
+The improper use of dynamic memory allocation can be a source of bugs. These can include security bugs
+or program crashes, most often due to segmentation faults.
+
+Most common errors are:
+
+Memory allocation is not guaranteed to succeed, and may instead return a null pointer. Using the
+returned value, without checking if the allocation is successful, invokes undefined behavior. This
+usually leads to crash (due to the resulting segmentation fault on the null pointer dereference), but
+there is no guarantee that a crash will happen so relying on that can also lead to problems.
+
+Memory leak - Failure to deallocate memory using free leads to buildup of non-reusable memory, which
+is no longer used by the program. This wastes memory resources and can lead to allocation failures when
+these resources are exhausted.
+
+Logical errors - All allocations must follow the same pattern: allocation using malloc, usage to store
+data, deallocation using free. Failures to adhere to this pattern, such as memory usage after a call
+to free or before a call to malloc, calling free twice ("double free"), etc., usually causes a
+segmentation fault and results in a crash of the program.

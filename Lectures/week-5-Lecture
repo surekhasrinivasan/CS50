@@ -1,0 +1,36 @@
+CS50 Week 5 Discussions
+
+1. Discuss HTTP and the creation of the web. Do some research on ARPANET and be ready to discuss
+something you found about it.
+
+HTTP (Hypertext Transfer Protocol) is a protocol for transferring the hypertext pages from Web Server
+to Web Browser. For exchanging web pages between Server and Browser, an HTTP session is setup using
+protocol methods (e.g. GET, POST etc.). HTTP used by the World Wide Web to define how messages are
+formatted and transmitted, and what actions Web servers and browsers should take in response to various
+commands.
+
+For example, when you enter a URL in your browser, this actually sends an HTTP command to the Web
+server redirecting it to fetch and transmit the requested Web page. The other main standard that
+controls how the World Wide Web works is HTML, which covers how Web pages are formatted and displayed.
+
+HTTP specifies exactly how one must make a request for a web page and exactly how a server, a machine
+that hosts web pages, delivers that information back to clients.
+
+There are HTTP status codes which are response codes given by Web servers and help identify the cause
+of the problem. For example, "404 File Not Found" is a common HTTP status code. It means the Web server
+cannot find the file you requested. This means the webpage or other document tried to load in your Web
+browser has either been moved or deleted, or you entered the wrong URL.
+
+Knowing the meaning of the HTTP status code can help you figure out what went wrong. On a 404 error,
+for example, you could look at the URL to see if a word looks misspelled, then correct it and try it
+again. If that doesn't work, backtrack by deleting information between each backslash, until you come
+to a page on that site that isn't a 404. From there you may be able to find the page you're looking for.
+
+The Advanced Research Projects Agency Network (ARPANET) was the first wide area packet switching network
+and the first network to implement the protocol suite TCP/IP. Both technologies became the technical
+foundation of the Internet. So ARPANET was the network that became the basis for the Internet. The ARPANET
+was initially funded by the Advanced Research Projects Agency (ARPA) of the United States Department of
+Defense.
+
+In 1969, the idea became a modest reality with the interconnection of four university computers in
+southwestern US (UCLA, Stanford Research Institute, UCSB, and the University of Utah).

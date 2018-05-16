@@ -21,10 +21,10 @@ of the problem. For example, "404 File Not Found" is a common HTTP status code. 
 cannot find the file you requested. This means the webpage or other document tried to load in your Web
 browser has either been moved or deleted, or you entered the wrong URL.
 
-Knowing the meaning of the HTTP status code can help you figure out what went wrong. On a 404 error,
-for example, you could look at the URL to see if a word looks misspelled, then correct it and try it
-again. If that doesn't work, backtrack by deleting information between each backslash, until you come
-to a page on that site that isn't a 404. From there you may be able to find the page you're looking for.
+Knowing the meaning of the HTTP status code can help you figure out what went wrong. On a 404 error, for
+example, you could look at the URL to see if a word looks misspelled, then correct it and try it again.
+If that doesn't work, backtrack by deleting information between each backslash, until you come to a page
+on that site that isn't a 404. From there you may be able to find the page you're looking for.
 
 The Advanced Research Projects Agency Network (ARPANET) was the first wide area packet switching network
 and the first network to implement the protocol suite TCP/IP. Both technologies became the technical
@@ -32,5 +32,51 @@ foundation of the Internet. So ARPANET was the network that became the basis for
 was initially funded by the Advanced Research Projects Agency (ARPA) of the United States Department of
 Defense.
 
-In 1969, the idea became a modest reality with the interconnection of four university computers in
-southwestern US (UCLA, Stanford Research Institute, UCSB, and the University of Utah).
+In 1969, the idea became reality with the interconnection of four university computers in southwestern
+US (UCLA, Stanford Research Institute, UCSB, and the University of Utah).
+
+
+2. Discuss the importance of TCP/IP and the power it awarded the internet. What was the purpose of
+creating IP/V6?
+
+Transmission Control Protocol (TCP) and Internet Protocol (IP) are two distinct computer network
+protocols. TCP/IP, are standard Internet communications protocols that allow digital computers to
+communicate over long distances.Transmission Control Protocol divides a message or file into packets
+that are transmitted over the internet and then reassembled when they reach their destination. Internet
+Protocol is responsible for the address of each packet so it is sent to the correct destination.
+
+IP:
+. Route data from sender to receiver.
+. Define an IP address.
+
+TCP:
+. Ensure data arrives to the receiver.
+. Ensure the data is in order.
+. Control speed at which data is sent (congestion control algorithm)
+
+TCP/IP is very important because the whole internet is based on it. Without TCP/IP the data communication
+and Internet is not possible.
+
+IP/V6:
+
+IP/v6 is Internet Protocol version 6 designed to replace IP/v4.
+
+In order to communicate over the Internet, computers and other devices must have sender and receiver
+addresses. These numeric addresses are known as Internet Protocol addresses (IP Address). As the
+Internet and the number of people using it grows exponentially, so does the need for IP addresses.
+
+IPv6 allows more users and devices to communicate on the Internet by using bigger numbers to create
+IP addresses. Under IPv4, every IP address is 32 bits long, which allows 4.3 billion unique addresses.
+An example IPv4 address is:
+
+172.16.254.1
+
+In comparison, IPv6 addresses are 128 bits, which allow for approximately three hundred and forty
+trillion, trillion unique IP addresses. An example IPv6 address is:
+
+2001:db8:ffff:1:201:02ff:fe03:0405
+
+IPv6 offers other networking advantages. In most cases, computers and applications will detect and
+take advantage of IPv6-enabled networks and services without requiring any action from the user. IPv6
+also relieves other networking issues that can arise due to the limited number of addresses available
+on IPv4.
